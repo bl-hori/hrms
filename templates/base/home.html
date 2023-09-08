@@ -2,12 +2,11 @@
 
 {% block content %}
 
-{% load socialaccount %}
+{{ request.user.is_authenticated }}
 
 <div class="ui grid stackable">
-    <div class="eleven wide column">
-      <a href="{% provider_login_url 'google'%}" class="ui button">Login with Google</a>
-    </div>
-    {% include "base/navbar.html" %}
+  <div class="eleven wide column">
+  </div>
+  {% include "base/navbar.html" %}
 </div>
 {% endblock %}
